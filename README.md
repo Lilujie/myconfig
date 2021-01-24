@@ -7,3 +7,4 @@ depend:
 6. ripgrep
 7. cscope
 8. ctags
+cp -r nvim ~/.config
