@@ -5,7 +5,7 @@ set nu
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8
-
+set mouse=a
 autocmd FileType c setlocal noexpandtab tabstop=4
 autocmd FileType cc,cpp,java,python,javascript setlocal expandtab tabstop=4
 set smartindent
