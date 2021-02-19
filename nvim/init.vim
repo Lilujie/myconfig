@@ -5,7 +5,7 @@ set nu
 set enc=utf-8
 set fenc=utf-8
 set fencs=utf-8
-set mouse=a
+set mouse=nv
 autocmd FileType c setlocal noexpandtab tabstop=4
 autocmd FileType cc,cpp,java,python,javascript setlocal expandtab tabstop=4
 set smartindent
@@ -19,7 +19,7 @@ colorscheme mycolor
 
 set cursorline
 
-autocmd FileType c,cc,cpp,java,python,javascript setlocal colorcolumn=81
+"autocmd FileType c,cc,cpp,java,python,javascript setlocal colorcolumn=81
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -92,7 +92,7 @@ func! CompileGcc()
 endfunc
 func! CompileGpp()
     let compilecmd="!g++ "
-    let compileflag="-o %< "
+    let compileflag="--std=c++11 -o %< "
     if search("mpi\.h") != 0
         let compilecmd = "!mpic++ "
     endif
