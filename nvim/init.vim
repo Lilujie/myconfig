@@ -92,7 +92,7 @@ func! CompileGcc()
 endfunc
 func! CompileGpp()
     let compilecmd="!g++ "
-    let compileflag="--std=c++11 -o %< "
+    let compileflag="--std=c++14 -o %< "
     if search("mpi\.h") != 0
         let compilecmd = "!mpic++ "
     endif
